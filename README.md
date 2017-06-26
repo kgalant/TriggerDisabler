@@ -8,7 +8,7 @@ So your code would look something like this:
 ```java
 trigger AccountTrigger on Account (after insert, after update) {
     // Check if the trigger is enabled first
-    if (TriggerSwitch.isTriggerEnabled('AccountTrigger')) {
+    if (TriggerSwitch.isTriggerEnabled('AccountTrigger')) { // --- magic happens here
         if(Trigger.isAfter && Trigger.isInsert) {
             AccountTriggerHandler.handleAfterInsert(Trigger.new);
         } else if(Trigger.isAfter && Trigger.isUpdate) {
@@ -24,7 +24,7 @@ public class AccountTriggerHandler {
     }
     private static void doThis(List accts) {
         // check if top-level handler method is enabled first
-        if (TriggerSwitch.isHandlerEnabled('AccountTrigger','doThis')) {
+        if (TriggerSwitch.isHandlerEnabled('AccountTrigger','doThis')) { // --- magic happens here
             // ... your actual logic here
         }
     }
