@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>TriggerSwitch</members>
+        <members>TriggerSwitch_Test</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>SampleAccountTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>Trigger_Disabler.TestingDisabler1</members>
+        <members>Trigger_Disabler.TestingDisabler2</members>
+        <members>Trigger_Disabler.TestingDisabler3</members>
+        <members>Trigger_Disabler.TestingDisabler4</members>
+        <members>Trigger_Disabler.TestingDisabler5</members>
+        <name>CustomMetadata</name>
+    </types>
+    <types>
+        <members>Trigger_Disabler__mdt</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Trigger_Disabler__mdt-Trigger Disabler Layout</members>
+        <name>Layout</name>
+    </types>
+    <version>40.0</version>
+</Package>

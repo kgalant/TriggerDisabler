@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This custom metadata type is used to facilitate the individual disabling of triggers or trigger handler functions to easily be able to disable a part (or all of) of a running trigger.</description>
+    <fields>
+        <fullName>Disabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This is the field that controls whether a trigger (or part of a trigger) is disabled. When the checkbox is checked (value = TRUE), the particular trigger part will be disabled.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>This is the field that controls whether a trigger (or part of a trigger) is disabled. When the checkbox is checked (value = TRUE), the particular trigger part will be disabled.</inlineHelpText>
+        <label>Disabled?</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Method_name__c</fullName>
+        <defaultValue>&quot;global&quot;</defaultValue>
+        <description>This is the name of the method (inside a handler) that you want to disable. If you want to disable a trigger altogether, enter global or leave blank.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>This is the name of the method (inside a handler) that you want to disable. If you want to disable a trigger altogether, enter global.</inlineHelpText>
+        <label>Method name</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Trigger_Name__c</fullName>
+        <description>The name (API Name) of a trigger/triggerhandler method that this record controls. E.g. if you want to control a trigger called AccountTrigger, enter AccountTrigger. If you want to control a handler method inside the handler class AcctTrgHandler, enter AcctTrgHandler.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>The name (API Name) of a trigger or handler method that this record controls. Want to control a trigger called AccountTrigger, enter AccountTrigger. If you want to control a handler method inside the handler class AcctTrgHandler, enter AcctTrgHandler.</inlineHelpText>
+        <label>Trigger Name</label>
+        <length>40</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Trigger Disabler</label>
+    <pluralLabel>Trigger Disablers</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>
